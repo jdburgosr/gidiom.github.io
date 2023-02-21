@@ -1,19 +1,19 @@
 
 # Table of Contents
 
-1.  [Movimiento armónico simple (M.A.S) <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-02 jue&gt;</span></span>](#orgc65181b)
-    1.  [Péndulo](#org20eb5c6)
-        1.  [Péndulo simple](#orgce3c839)
-        2.  [Gráfica del ángulo](#org30a9aaf)
-        3.  [Simulador interactivo](#org7e677c4)
-        4.  [Solución exacta [OPCIONAL]](#org2ab2795)
-        5.  [Péndulo doble](#org84076cc)
-    2.  [Sistema masa resorte](#org59897e8)
+1.  [Movimiento armónico simple (M.A.S) <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-02 jue&gt;</span></span>](#orgc46fd09)
+    1.  [Péndulo](#org7e306eb)
+        1.  [Péndulo simple](#org5a4603b)
+        2.  [Gráfica del ángulo](#org6e63530)
+        3.  [Simulador interactivo](#org82dcd6c)
+        4.  [Solución exacta [OPCIONAL]](#orga4d1d99)
+        5.  [Péndulo doble](#org417fee4)
+    2.  [Sistema masa resorte](#org4f033fa)
 
 Esta es la serie de notas de física realizadas para el primer periodo.
 
 
-<a id="orgc65181b"></a>
+<a id="orgc46fd09"></a>
 
 # Movimiento armónico simple (M.A.S) <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-02 jue&gt;</span></span>
 
@@ -28,12 +28,12 @@ Es un movimiento periódico en el que un cuerpo oscila respecto a su posición d
 Todo M.A.S tiene una posición de equilibrio respecto a la cual el movimiento es simétrico.
 
 
-<a id="org20eb5c6"></a>
+<a id="org7e306eb"></a>
 
 ## Péndulo
 
 
-<a id="orgce3c839"></a>
+<a id="org5a4603b"></a>
 
 ### Péndulo simple
 
@@ -171,10 +171,38 @@ Los siguientes son datos de ejemplo calculados a partir de la ecuación del peri
 
     python3 programas/pendulo_simple.py -dt 0.01 -l 9 -g 9.8 -o 7.14
 
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Calculated period</td>
+<td class="org-left">T = 6.33 s</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Estimated small-displacement angle period</td>
+<td class="org-left">Tharm = 6.021269769463479 s</td>
+</tr>
+
+
+<tr>
+<td class="org-left">SciPy calculated period</td>
+<td class="org-left">T = 6.309756272264525 s</td>
+</tr>
+</tbody>
+</table>
+
 El péndulo simple presenta un movimiento periódico y su periodo aumenta conforme aumenta su longitud, así como disminuye si la gravedad del sistema aumenta.
 
 
-<a id="org30a9aaf"></a>
+<a id="org6e63530"></a>
 
 ### Gráfica del ángulo
 
@@ -190,10 +218,12 @@ El péndulo simple presenta un movimiento periódico y su periodo aumenta confor
     
     return './imagenes/angulo.png'
 
+![img](./imagenes/angulo.png)
+
 Podemos ver que la gráfica es la gráfica de una función seno, ya que el angulo está descrita por esta función.
 
 
-<a id="org7e677c4"></a>
+<a id="org82dcd6c"></a>
 
 ### Simulador interactivo
 
@@ -202,7 +232,7 @@ Entren a esta página donde pueden jugar y practicar con el péndulo:
 [Simulador pendulo](https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_es.html)
 
 
-<a id="org2ab2795"></a>
+<a id="orga4d1d99"></a>
 
 ### Solución exacta [OPCIONAL]
 
@@ -218,7 +248,7 @@ Entonces mira este video
 [explicación en video (Inglés)](https://www.youtube.com/watch?v=efvT2iUSjaA)
 
 
-<a id="org84076cc"></a>
+<a id="org417fee4"></a>
 
 ### Péndulo doble
 
@@ -227,7 +257,7 @@ Entonces mira este video
 Podemos notar que no todo péndulo genera un movimiento armónico simple.
 
 
-<a id="org59897e8"></a>
+<a id="org4f033fa"></a>
 
 ## Sistema masa resorte
 
