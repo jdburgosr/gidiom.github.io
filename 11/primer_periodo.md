@@ -1,19 +1,20 @@
 
 # Table of Contents
 
-1.  [Movimiento armónico simple (M.A.S) <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-02 jue&gt;</span></span>](#orgc46fd09)
-    1.  [Péndulo](#org7e306eb)
-        1.  [Péndulo simple](#org5a4603b)
-        2.  [Gráfica del ángulo](#org6e63530)
-        3.  [Simulador interactivo](#org82dcd6c)
-        4.  [Solución exacta [OPCIONAL]](#orga4d1d99)
-        5.  [Péndulo doble](#org417fee4)
-    2.  [Sistema masa resorte](#org4f033fa)
+1.  [Movimiento armónico simple (M.A.S) <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-02 jue&gt;</span></span>](#org6592b46)
+    1.  [Péndulo](#orgad3321a)
+        1.  [Péndulo simple](#org048df5d)
+        2.  [Gráfica del ángulo](#org4b6a0d2)
+        3.  [Simulador interactivo](#org1fa2987)
+        4.  [Solución exacta [OPCIONAL]](#org735e719)
+        5.  [Péndulo doble](#org2595f05)
+    2.  [Sistema masa resorte](#org0ed2699)
+    3.  [Ejercicios](#org7753655)
 
 Esta es la serie de notas de física realizadas para el primer periodo.
 
 
-<a id="orgc46fd09"></a>
+<a id="org6592b46"></a>
 
 # Movimiento armónico simple (M.A.S) <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-02 jue&gt;</span></span>
 
@@ -28,12 +29,12 @@ Es un movimiento periódico en el que un cuerpo oscila respecto a su posición d
 Todo M.A.S tiene una posición de equilibrio respecto a la cual el movimiento es simétrico.
 
 
-<a id="org7e306eb"></a>
+<a id="orgad3321a"></a>
 
 ## Péndulo
 
 
-<a id="org5a4603b"></a>
+<a id="org048df5d"></a>
 
 ### Péndulo simple
 
@@ -171,38 +172,18 @@ Los siguientes son datos de ejemplo calculados a partir de la ecuación del peri
 
     python3 programas/pendulo_simple.py -dt 0.01 -l 9 -g 9.8 -o 7.14
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">Calculated period</td>
-<td class="org-left">T = 6.33 s</td>
-</tr>
-
-
-<tr>
-<td class="org-left">Estimated small-displacement angle period</td>
-<td class="org-left">Tharm = 6.021269769463479 s</td>
-</tr>
-
-
-<tr>
-<td class="org-left">SciPy calculated period</td>
-<td class="org-left">T = 6.309756272264525 s</td>
-</tr>
-</tbody>
-</table>
-
 El péndulo simple presenta un movimiento periódico y su periodo aumenta conforme aumenta su longitud, así como disminuye si la gravedad del sistema aumenta.
 
+<p class="verse">
+El periodo en el péndulo simple representa el tiempo en que el sistema tarda en realizar una oscilación completa.<br />
+</p>
 
-<a id="org6e63530"></a>
+<p class="verse">
+La solución anteriormente vista es una aproximación para el caso en que el péndulo simple tiene valores de angulo inicial pequeños.<br />
+</p>
+
+
+<a id="org4b6a0d2"></a>
 
 ### Gráfica del ángulo
 
@@ -223,7 +204,7 @@ El péndulo simple presenta un movimiento periódico y su periodo aumenta confor
 Podemos ver que la gráfica es la gráfica de una función seno, ya que el angulo está descrita por esta función.
 
 
-<a id="org82dcd6c"></a>
+<a id="org1fa2987"></a>
 
 ### Simulador interactivo
 
@@ -232,7 +213,7 @@ Entren a esta página donde pueden jugar y practicar con el péndulo:
 [Simulador pendulo](https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_es.html)
 
 
-<a id="orga4d1d99"></a>
+<a id="org735e719"></a>
 
 ### Solución exacta [OPCIONAL]
 
@@ -248,7 +229,7 @@ Entonces mira este video
 [explicación en video (Inglés)](https://www.youtube.com/watch?v=efvT2iUSjaA)
 
 
-<a id="org417fee4"></a>
+<a id="org2595f05"></a>
 
 ### Péndulo doble
 
@@ -257,7 +238,7 @@ Entonces mira este video
 Podemos notar que no todo péndulo genera un movimiento armónico simple.
 
 
-<a id="org4f033fa"></a>
+<a id="org0ed2699"></a>
 
 ## Sistema masa resorte
 
@@ -293,4 +274,23 @@ Utilizaremos un sistema sin fricción. Los sistema  masa-resorte consisten en qu
     -   A es la amplitud del movimiento y da razón de que tanto se elonga o comprime el resorte.
     -   w es llamada, frecuencia angular y determina el periodo del movimiento.
     -   $\phi$ es llamada fase inicial, y define la posición inicial del movimiento.
+
+
+<a id="org7753655"></a>
+
+## Ejercicios
+
+1.  Determina la ecuación representativa de un movimiento armónico simple sabiendo que la separación máxima a la posición de equilíbrio es de 20 cm y se han contado 25 oscilaciones en 5 segundos partiendo del equilibrio.
+
+2.  Se cuelga un objeto de 200 g de un resorte sujeto al techo de 35 cm de longitud y su nueva longitud es de 45 cm.
+    -   Determina la constante de elasticidad k del resorte
+    -   Si estiramos el resorte hasta que mida 55 cm y lo soltamos, determina las fuerzas que actúan sobre el resorte.
+
+3.  Determina cual debe ser la amplitud de las oscilaciones de un péndulo de 70 cm sabiendo que el máximo ángulo que separa el hilo de la vertical es de 6º. ¿Qué fuerzas actúan sobre el cuerpo en esa situación suponiendo una masa de 80 g?
+
+4.  ¿Cual será la gravedad en un planeta en el que un péndulo de longitud 10 cm tarda 0.634 segundos en realizar una oscilación completa?
+
+5.  Una partícula de m=200 g de masa unida a un muelle horizontal, realiza un movimiento armónico simple siendo la frecuencia angular ω=100 rad/s. Sabemos que en el instante t=0, la posición inicial −0.5√3cm, y la velocidad inicial de la partícula es 50 cm/s.
+    -   Escribir la ecuación del MAS
+    -   Calcular la constante elástica del resorte.
 
