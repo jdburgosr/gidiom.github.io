@@ -5,7 +5,7 @@ body{
     width: 100%;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(24,10,27,1) 39%);
-
+    overflow: hidden;
 }
 
 .background {
@@ -122,4 +122,11 @@ body{
     100% {
         background-position: 2000px 0px;
     }
+}
+
+
+audio{
+    position: absolute;
+    width: 100%;
+    top: 0px;
 }
