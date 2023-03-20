@@ -1,0 +1,160 @@
+#+title: Primer_periodo
+#+grade: 10
+#+author: Juan Burgos
+
+* Movimiento rectilíneo uniforme (M.R.U)
+
+- ¿Qué es el movimiento rectilíneo uniforme?
+  Es el movimiento que realiza un cuerpo a velocidad constante cuando su trayectoria es una linea recta.
+
+- ¿Que lo diferencia de otros movimientos?
+  Otros movimientos pueden presentar trayectorias circulares o aceleraciones distintas de cero cambiando su velocidad.
+
+- ¿Qué ejemplos de este movimiento conocemos?
+  - Un carro a velocidad constante en una carretera.
+  - Una bala
+  - bolas de billar durante el movimiento
+
+#+begin_src python :results file
+from matplotlib import pyplot as plt
+import numpy as np
+
+x = np.linspace(-1,20,20).astype(int)
+y1 = 4*x+1
+y2 = 4*x +20
+y3 = 3*x + 2
+fig = plt.figure()
+plt.plot(x, y3)
+plt.scatter(x,y3)
+plt.axvline(0)
+#plt.axvline(5)
+plt.axhline(40)
+plt.axvline(38/3)
+fig.tight_layout()
+plt.savefig('images/rectas.png')
+return 'images/rectas.png' # return filename to org-mode
+#+end_src
+
+#+attr_html: :width 500px
+#+RESULTS:
+[[file:images/rectas.png]]
+
+Una de las características del M.R.U es que tiene velocidad constante. Y su aceleración es nula.
+
+La velocidad se calcula de la siguiente manera.
+
+
+\begin{equation}
+V = \frac{\Delta X}{\Delta t}
+\end{equation}
+
+En el movimiento rectilíneo uniforme, esta velocidad es constante.
+
+$\Delta X$ representa la variación en la distancia, y $\Delta t$ en el tiempo.
+
+#+begin_comment
+En el movimiento rectilineo uniforme la pendiente de la gráfica es la velocidad del sistema.
+#+end_comment
+
+
+
+*Ejemplo en clase*
+
+#+begin_src python
+from matplotlib import pyplot as plt
+import numpy as np
+
+t = np.array([0,0.24,0.4,0.56, 0.78])
+d = np.array([0,1.2,2,2.8,3.9])
+
+plt.scatter(t,d)
+
+#+end_src
+
+#+RESULTS:
+: 4.705882352941178
+
+
+
+** Simuladores
+
+- [[https://labovirtual.blogspot.com/2013/07/movimiento-rectilineo.html]]
+- [[https://www.educaplus.org/game/movimiento-rectilineo-uniforme]]
+
+** Ecuaciones del MRU
+Las ecuaciones que relacionan el tiempo, la posición y la velocidad son: $x(t) = x_{0} + v \cdot t$, y la ecuación de velocidad usual. De ahí, las relaciones con el tiempo se pueden obtener a través de despeje.
+
+- [ ]  Revisar tarea en clase:
+
+| Distancias (m)        |  100 |   50 |   10 |    2 |    1 |
+| Tiempo (seg)          | 10.0 | 4.17 | 0.81 | 0.18 | 0.08 |
+| Velocidad media (m/s) |   10 | 12.0 | 12.3 | 12.5 | 12.5 |
+
+
+** Aceleración
+La aceleración es la magnitud física que expresa los cambios en la velocidad de un cuerpo. Una aceleración iguala a cero significa que no existe cambio en la velocidad, una aceleración alta significa que la velocidad cambia rápidamente, y una aceleración cercana a cero implica velocidades que cambian lentamente en el tiempo.
+
+*** Taller de repaso.
+Este taller es de los conceptos que hemos visto hasta ahora :).
+
+**** M.R.U
+
+1) Sabemos que en el movimiento rectilíneo la _____ se mantiene constante, ¿Cierto?. mmmm, ¿Cuanto es la aceleración?. En tus palabras describe cual es la diferencia entre aceleración y velocidad.
+
+2) Da tres ejemplos de un movimiento rectilineo uniforme.
+
+3) Del ejemplo anterior haz una recolección ficticia de datos para el primer ejemplo, es decir, toma una velocidad ficticia y simula cinco valores de posición para cinco valores de tiempo y posicionalos en la siguiente tabla.
+
+   | x(m) | t(s) |
+   |------+------|
+   |      |      |
+   |      |      |
+   |      |      |
+   |      |      |
+   |      |      |
+
+   *¿Listo?. La parte mas divertida :D, a graficar :).*
+
+**** Aceleración
+
+Supón que vas en una lancha en coveñas divirtiendote tanto como en tu clase de física, y partes desde el reposo, empiezas a acelerar la lancha y notas que la lancha no acelera de forma constante, por lo que decides aplicar lo aprendido en física y tomas las siguientes medidas de velocidad dadas por el velocímetro de la lancha.
+
+| a(m/s²) | v(m/s) | t(s) |
+|---------+--------+------|
+|       0 |      0 |    0 |
+|         |      3 |    1 |
+|         |      4 |    2 |
+|       6 |     10 |    3 |
+|         |      4 |    5 |
+
+Calcula la aceleración en cada intervalo de velocidad. Te ayudo con la aceleración para el segundo 3.
+
+\begin{gather*}
+a=\frac{v_{f}-v_{i}}{t_{f}-t_{i}}
+\end{gather*}
+
+Vamos a tomar la velocidad final como la del segundo en el que estamos, y la inicial como la del segundo inmediatamente anterior. En este caso: $v_{f}=10$ y $v_{i}=4$, por lo que $t_{f}=3$ y $t_{i}=2$.
+
+
+\begin{gather*}
+a=\frac{10m/s-4m/s}{3s-2s}\\
+a=\frac{6m/s}{1s}\\
+a=6m/s^{2}
+\end{gather*}
+
+:)
+
+* TODO COMMENT evidencias primer periodo [0/1]
+
+** TODO DBA [0/2]
+
+1.Comprende, que el reposo o el movimiento
+rectilíneo uniforme, se presentan cuando las
+fuerzas aplicadas sobre el sistema se anulan
+entre ellas, y que en presencia de fuerzas
+resultantes no nulas se producen cambios
+de velocidad.
+
+- [ ] Predice el equilibrio (de reposo o movimiento uniforme en línea recta) de un cuerpo a partir del análisis de las fuerzas que actúan sobre él (primera ley de Newton).
+
+- [ ] Estima, a partir de las expresiones matemáticas, los cambios de velocidad (aceleración) que experimenta un cuerpo a partir de la relación entre fuerza y masa (segunda ley de Newton).
