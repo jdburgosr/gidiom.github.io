@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-20 lun 12:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Primer Periodo</title>
+<meta name="author" content="Gidiom Gates" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Primer Periodo</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc533924">1. Movimiento armónico simple (M.A.S) <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-02 jue&gt;</span></span></a>
+<ul>
+<li><a href="#orge1723c2">1.1. Péndulo</a>
+<ul>
+<li><a href="#orgf9cc463">1.1.1. Péndulo simple</a></li>
+<li><a href="#org9ead5bf">1.1.2. Gráfica del ángulo</a></li>
+<li><a href="#orgd4f293c">1.1.3. Simulador interactivo</a></li>
+<li><a href="#orgcc65d91">1.1.4. Solución exacta [OPCIONAL]</a></li>
+<li><a href="#org6cd756f">1.1.5. Péndulo doble</a></li>
+</ul>
+</li>
+<li><a href="#orgb96c6de">1.2. Sistema masa resorte</a></li>
+<li><a href="#org4a24989">1.3. Ejercicios</a></li>
+<li><a href="#orgefbbb58">1.4. Velocidad en el M.A.S <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-03-06 lun&gt;</span></span></a></li>
+<li><a href="#org01755ba">1.5. Taller repaso</a></li>
+<li><a href="#org01d44d0">1.6. Ecuaciones del M.A.S <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-03-13 lun&gt;</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org4ba4b35">2. Ondas <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-03-16 jue 08:22&gt;</span></span></a>
+<ul>
+<li><a href="#orgdf80752">2.1. Mecánicas</a></li>
+<li><a href="#org97b9851">2.2. Electromagnéticas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Esta es la serie de notas de física realizadas para el primer periodo.
+</p>
+
+<div id="outline-container-orgc533924" class="outline-2">
+<h2 id="orgc533924"><span class="section-number-2">1.</span> Movimiento armónico simple (M.A.S) <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-02 jue&gt;</span></span></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Es un movimiento periódico en el que un cuerpo oscila respecto a su posición de equilibrio a intérvalos iguales de tiempo.
+</p>
+
+<pre class="example" id="orgbca45d7">
+- Manecillas del reloj
+- Péndulo simple
+- Movimiento de un cuerpo sujeto a un resorte.
+
+Estos ejemplos ignoran la fricción del aire, por eso se llaman modelos simples.
+</pre>
+
+<p>
+Todo M.A.S tiene una posición de equilibrio respecto a la cual el movimiento es simétrico.
+</p>
+</div>
+
+
+<div id="outline-container-orge1723c2" class="outline-3">
+<h3 id="orge1723c2"><span class="section-number-3">1.1.</span> Péndulo</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgf9cc463" class="outline-4">
+<h4 id="orgf9cc463"><span class="section-number-4">1.1.1.</span> Péndulo simple</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Ejemplo de péndulo simple.
+</p>
+<ul class="org-ul">
+<li>¿Es un movimiento armónico simple?</li>
+<li>¿ Por qué es armónico o simple?</li>
+</ul>
+
+
+<p>
+La ecuación del péndulo simple es después de la resolución de las ecuaciones:
+</p>
+
+\begin{equation}
+\theta (t) = sen\left( \sqrt{\frac{g}{l}} \cdot t \right)
+\end{equation}
+
+<p>
+El periodo queda de la forma,
+</p>
+
+\begin{equation}
+\mathrm{T} = 2\pi \sqrt{\frac{l}{g}}
+\end{equation}
+
+<p>
+Los siguientes son datos de ejemplo calculados a partir de la ecuación del periodo.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">L(m)</th>
+<th scope="col" class="org-right">g(m/s²)</th>
+<th scope="col" class="org-right">M(kg)</th>
+<th scope="col" class="org-right">T(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">7</td>
+<td class="org-right">9.8</td>
+<td class="org-right">10</td>
+<td class="org-right">5.3102608</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">9.8</td>
+<td class="org-right">6</td>
+<td class="org-right">4.0141798</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-right">12</td>
+<td class="org-right">10</td>
+<td class="org-right">5.1301993</td>
+</tr>
+
+<tr>
+<td class="org-right">31</td>
+<td class="org-right">9.8</td>
+<td class="org-right">0</td>
+<td class="org-right">11.175004</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-right">9.8</td>
+<td class="org-right">0</td>
+<td class="org-right">5.6769076</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-right">9.8</td>
+<td class="org-right">0</td>
+<td class="org-right">4.9163462</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-right">9.8</td>
+<td class="org-right">0</td>
+<td class="org-right">6.9527634</td>
+</tr>
+
+<tr>
+<td class="org-right">50</td>
+<td class="org-right">9.8</td>
+<td class="org-right">0</td>
+<td class="org-right">14.192269</td>
+</tr>
+
+<tr>
+<td class="org-right">60</td>
+<td class="org-right">9.8</td>
+<td class="org-right">0</td>
+<td class="org-right">15.546852</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">9.8</td>
+<td class="org-right">0</td>
+<td class="org-right">4.4879895</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-right">9.8</td>
+<td class="org-right">0</td>
+<td class="org-right">6.0212698</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a href="https://scipython.com/book2/chapter-7-matplotlib/problems/p77/animating-a-pendulum/">Página del código</a>
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">python3 programas/pendulo_simple.py -dt <span style="color: #d55e00; font-weight: bold;">0.01</span> -l <span style="color: #d55e00; font-weight: bold;">9</span> -g <span style="color: #d55e00; font-weight: bold;">9.8</span> -o <span style="color: #d55e00; font-weight: bold;">7.14</span>
+</pre>
+</div>
+
+
+<p>
+El péndulo simple presenta un movimiento periódico y su periodo aumenta conforme aumenta su longitud, así como disminuye si la gravedad del sistema aumenta.
+</p>
+
+
+<p class="verse">
+El periodo en el péndulo simple representa el tiempo en que el sistema tarda en realizar una oscilación completa.<br />
+</p>
+
+<p class="verse">
+La solución anteriormente vista es una aproximación para el caso en que el péndulo simple tiene valores de angulo inicial pequeños.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ead5bf" class="outline-4">
+<h4 id="org9ead5bf"><span class="section-number-4">1.1.2.</span> Gráfica del ángulo</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #56b4e9; font-weight: bold;">import</span> numpy <span style="color: #56b4e9; font-weight: bold;">as</span> np
+<span style="color: #56b4e9; font-weight: bold;">from</span> matplotlib <span style="color: #56b4e9; font-weight: bold;">import</span> pyplot <span style="color: #56b4e9; font-weight: bold;">as</span> plt
+
+<span style="color: #e69f00; font-weight: bold;">t</span> <span style="color: #56b4e9; font-weight: bold;">=</span> np.<span style="color: #0072b2; font-weight: bold; font-style: italic;">linspace</span>(<span style="color: #d55e00; font-weight: bold;">0</span>,<span style="color: #d55e00; font-weight: bold;">10</span>,<span style="color: #d55e00; font-weight: bold;">100</span>)
+<span style="color: #e69f00; font-weight: bold;">y</span> <span style="color: #56b4e9; font-weight: bold;">=</span> np.<span style="color: #0072b2; font-weight: bold; font-style: italic;">sin</span>(np.<span style="color: #0072b2; font-weight: bold; font-style: italic;">sqrt</span>(<span style="color: #d55e00; font-weight: bold;">9.8</span><span style="color: #56b4e9; font-weight: bold;">/</span><span style="color: #d55e00; font-weight: bold;">10</span>)<span style="color: #56b4e9; font-weight: bold;">*</span>t)
+
+plt.<span style="color: #0072b2; font-weight: bold; font-style: italic;">plot</span>(t,y)
+
+plt.<span style="color: #0072b2; font-weight: bold; font-style: italic;">savefig</span>(<span style="color: #848ea9;">"./imagenes/angulo.png"</span>)
+
+<span style="color: #56b4e9; font-weight: bold;">return</span> <span style="color: #848ea9;">'./imagenes/angulo.png'</span>
+</pre>
+</div>
+
+
+<div id="orgc3ba8df" class="figure">
+<p><img src="./imagenes/angulo.png" alt="angulo.png" />
+</p>
+</div>
+
+<p>
+Podemos ver que la gráfica es la gráfica de una función seno, ya que el angulo está descrita por esta función.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4f293c" class="outline-4">
+<h4 id="orgd4f293c"><span class="section-number-4">1.1.3.</span> Simulador interactivo</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+Entren a esta página donde pueden jugar y practicar con el péndulo:
+</p>
+
+<p>
+<a href="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_es.html">Simulador pendulo</a>
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgcc65d91" class="outline-4">
+<h4 id="orgcc65d91"><span class="section-number-4">1.1.4.</span> Solución exacta [OPCIONAL]</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+La solución exacta a la ecuación del péndulo la pueden encontrar en este link: <a href="https://www.cfm.brown.edu/people/dobrush/am33/Mathematica/ch4/solution.html">Solución exacta</a>
+</p>
+
+<p>
+Les ahorro entrar a la página,
+</p>
+
+
+<div id="org5aea5b0" class="figure">
+<p><img src="./imagenes/pendulosolucion.png" alt="pendulosolucion.png" width="1000px" />
+</p>
+</div>
+
+
+<p>
+<b>¿De verdad quieres saber?</b>
+Entonces mira este video
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=efvT2iUSjaA">explicación en video (Inglés)</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org6cd756f" class="outline-4">
+<h4 id="org6cd756f"><span class="section-number-4">1.1.5.</span> Péndulo doble</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<div class="org-src-container">
+<pre class="src src-bash">python3 programas/pendulo_doble_2.py
+</pre>
+</div>
+
+<p>
+Podemos notar que no todo péndulo genera un movimiento armónico simple.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb96c6de" class="outline-3">
+<h3 id="orgb96c6de"><span class="section-number-3">1.2.</span> Sistema masa resorte</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>¿Cual es el movimiento de un sistema masa resorte?</li>
+<li>¿ Que diferencias tiene con un péndulo?
+<ul class="org-ul">
+<li>Se parecen en que tiene oscilaciones</li>
+<li>ambos tienen un MAS.</li>
+</ul></li>
+</ul>
+
+
+
+<div id="org3c35437" class="figure">
+<p><img src="./imagenes/masa_resorte.gif" alt="masa_resorte.gif" width="300px" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Movimiento de una masa en un resorte</p>
+</div>
+
+
+<p>
+Utilizaremos un sistema sin fricción. Los sistema  masa-resorte consisten en que un cuerpo de cierta masa está atado a uno de los extremos de un resorte y el cuerpo está sometido a alguna fuerza externa. Usualmente en sistemas simples, no se considera la fricción del aire ni la masa del resorte.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org30b560f"></a>Constante K<br />
+<div class="outline-text-5" id="text-1-2-0-1">
+<p>
+La constante K o constante del resorte. Se denomina la constante elástica del resorte, y relaciona la fuerza que ejerce un resorte con respecto a su distancia de elongación.
+</p>
+</div>
+</li>
+
+<li><a id="org3f5f271"></a>Expresión de la Fuerza<br />
+<div class="outline-text-5" id="text-1-2-0-2">
+\begin{equation}
+F = k \cdot x
+\end{equation}
+
+<p>
+Donde k, es la constante de resorte y, x es la distancia de enlongación respecto al punto de equilibrio.
+</p>
+</div>
+</li>
+
+
+<li><a id="org641e2e0"></a>expresión de la posición respecto al tiempo<br />
+<div class="outline-text-5" id="text-1-2-0-3">
+\begin{equation}
+x(t) = Asin(w \cdot t + \phi )
+\end{equation}
+
+<p>
+Esta es la definición del movimiento del resorte con respecto al tiempo.
+</p>
+
+<ul class="org-ul">
+<li>A es la amplitud del movimiento y da razón de que tanto se elonga o comprime el resorte.</li>
+<li>w es llamada, frecuencia angular y determina el periodo del movimiento.</li>
+<li>\(\phi\) es llamada fase inicial, y define la posición inicial del movimiento.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org4a24989" class="outline-3">
+<h3 id="org4a24989"><span class="section-number-3">1.3.</span> Ejercicios</h3>
+<div class="outline-text-3" id="text-1-3">
+<ol class="org-ol">
+<li>Determina la ecuación representativa de un movimiento armónico simple sabiendo que la separación máxima a la posición de equilíbrio es de 20 cm y se han contado 25 oscilaciones en 5 segundos partiendo del equilibrio.</li>
+
+<li>Se cuelga un objeto de 200 g de un resorte sujeto al techo de 35 cm de longitud y su nueva longitud es de 45 cm.
+
+<ul class="org-ul">
+<li>Determina la constante de elasticidad k del resorte</li>
+<li>Si estiramos el resorte hasta que mida 55 cm y lo soltamos, determina las fuerzas que actúan sobre el resorte.</li>
+</ul></li>
+
+<li>Determina cual debe ser la amplitud de las oscilaciones de un péndulo de 70 cm sabiendo que el máximo ángulo que separa el hilo de la vertical es de 6º. ¿Qué fuerzas actúan sobre el cuerpo en esa situación suponiendo una masa de 80 g?</li>
+
+<li>¿Cual será la gravedad en un planeta en el que un péndulo de longitud 10 cm tarda 0.634 segundos en realizar una oscilación completa?</li>
+
+<li>Una partícula de m=200 g unida a un muelle horizontal, realiza un movimiento armónico simple siendo la frecuencia angular ω=100 rad/s. Sabemos que en el instante t=0, la posición inicial −0.5√3cm, y la velocidad inicial de la partícula es 50 cm/s.
+
+<ul class="org-ul">
+<li>Escribir la ecuación del MAS</li>
+<li>Calcular la constante elástica del resorte.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgefbbb58" class="outline-3">
+<h3 id="orgefbbb58"><span class="section-number-3">1.4.</span> Velocidad en el M.A.S <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-03-06 lun&gt;</span></span></h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+En la ecuación de movimiento del movimiento armónico simple, la fase se ve afectada por la posición inicial y la velocidad del sistema. Por ejemplo, en un resorte cuya velocidad inicial es cero la fase siempre será \(\phi /2\), si cambiamos la velocidad, entonces la fase deberá cambiar.
+</p>
+</div>
+</div>
+<div id="outline-container-org01755ba" class="outline-3">
+<h3 id="org01755ba"><span class="section-number-3">1.5.</span> Taller repaso</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Sabemos que un movimiento armónico simple es un movimiento que tiene un periódo y que luego de transcurrido ese periodo, el movimiento vuelve a tener las misas características físicas que al inicio. Ya hemos hecho varios ejemplos de movimiento periódico, pero pocos en los que no toque encontrar la posicion inicial.
+</p>
+
+<p class="verse">
+Como se que algunos no tienen la ecuación escrita :(, aqui se las dejo.<br />
+</p>
+
+\begin{gather*}
+x(t) = A\cdot sin(w \cdot t+ \phi)
+\end{gather*}
+
+<ol class="org-ol">
+<li><p>
+Supón que tienes un péndulo que sueltas desde el reposo a un ángulo de \(\phi=4^{o}\). Además la longitud de su cuerda es de \(15cm\).
+Debes calcular \(\phi\), \(w\) como también deducir \(A\) para escribir la ecuación del movimiento. Recuerda que como en el péndulo el movimiento es angular, la ecuación queda de la siguiente forma:
+</p>
+
+\begin{equation}
+\label{eq:3}
+\theta(t) = A\cdot sin(w \cdot t+ \phi)
+\end{equation}
+
+<p>
+Te ayudo empezando a hallar \(\phi\). Para ello, debemos primero saber que el pendulo se suelta en \(t=0\) porque sabemos que es justo el momento donde empieza el movimiento, remplazando queda como.
+</p>
+\begin{gather*}
+\theta (0) = A \cdot sin(\phi)
+\end{gather*}
+
+<p>
+Porque \(w\cdot t\) se hace cero. Por otro lado, la amplitud (como estamos trabajando respecto al angulo) debe ser el angulo inicial del movimiento ya que no le estamos imprimiendo velocidad (desde el reposo). Sin embargo debemos pasar ese angulo (4<sup>o</sup>) a radianes, ya que nos lo dan en grados, para eso, usa la siguiente relación.
+</p>
+
+\begin{equation}
+\label{eq:5}
+2\pi rad = 360^{o}
+\end{equation}
+
+<p>
+Ese resultado en radianes queda siendo la amplitud, por lo que:
+</p>
+
+\begin{equation}
+\label{eq:6}
+A=Asin(\phi)
+\end{equation}
+
+<p>
+¿Cuanto tiene que ser \(\phi\) para que se cumpla la igualdad.
+</p></li>
+
+<li><p>
+La ecuación de velocidad de un M.A.S es.
+</p>
+\begin{equation}
+\label{eq:7}
+v(t) = A\cdot w cos(w \cdot t + \phi)
+\end{equation}</li>
+</ol>
+
+<p>
+De los datos obtenidos en el punto anterior, ¿cómo quedaría la ecuación de la velocidad?.
+</p>
+
+<p>
+<b>Si puedes graficar ambas graficas, hazlo y comenta cuales son las principales diferencias entre ambas gráficas.</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org01d44d0" class="outline-3">
+<h3 id="org01d44d0"><span class="section-number-3">1.6.</span> Ecuaciones del M.A.S <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-03-13 lun&gt;</span></span></h3>
+<div class="outline-text-3" id="text-1-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Posición</td>
+<td class="org-left">\(x(t) = A \cdot sin(w\cdot t + \phi)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">Velocidad</td>
+<td class="org-left">\(x(t) = A\cdot w\cdot cos(w\cdot t + \phi)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">Aceleración</td>
+<td class="org-left">\(x(t) = -w^{2}\cdot A\cdot cos(w\cdot t + \phi)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">V<sub>max</sub></td>
+<td class="org-left">\(w\cdot\) A</td>
+</tr>
+
+<tr>
+<td class="org-left">A<sub>max</sub></td>
+<td class="org-left">\(w^{2} \cdot A\)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4ba4b35" class="outline-2">
+<h2 id="org4ba4b35"><span class="section-number-2">2.</span> Ondas <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-03-16 jue 08:22&gt;</span></span></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Formación de ondas, por ejemplo, agua, sonido, una cuerda.
+</p>
+</div>
+
+<div id="outline-container-orgdf80752" class="outline-3">
+<h3 id="orgdf80752"><span class="section-number-3">2.1.</span> Mecánicas</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Son las que se propagan a traves de la materia, por medios elásticos, como por ejemplo el sonido y las ondas en los estanques de agua.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org97b9851" class="outline-3">
+<h3 id="org97b9851"><span class="section-number-3">2.2.</span> Electromagnéticas</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Transportan energía  atraves de campos electricos y magnéticos, y pueden hacerlo a traves del vacío. Por ejemplo, la luz.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Gidiom Gates</p>
+<p class="date">Created: 2023-03-20 lun 12:28</p>
+</div>
+</body>
+</html>
